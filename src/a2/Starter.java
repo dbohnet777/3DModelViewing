@@ -27,7 +27,7 @@ public class Starter extends JFrame implements GLEventListener{
 
 	public Starter(){	
 		setTitle("Assignment #1");
-		setSize(400, 500);
+		setSize(1000, 1000);
 		myCanvas = new GLCanvas();
 		myCanvas.addGLEventListener(this);
 		getContentPane().add(myCanvas);

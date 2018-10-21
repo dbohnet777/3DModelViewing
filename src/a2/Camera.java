@@ -36,43 +36,43 @@ public class Camera {
 	}
 	
 	//************functions for camera movement and rotation*****************************//
-	private void moveForward() {
+	protected void moveForward() {
 		zPos += cInc;
 		computeView();
 	}
-	private void moveBackward() {
+	protected void moveBackward() {
 		zPos -= cInc;
 		computeView();
 	}
-	private void moveLeft() {
+	protected void moveLeft() {
 		xPos += cInc;
 		computeView();
 	}
-	private void moveRight() {
+	protected void moveRight() {
 		xPos -= cInc;
 		computeView();
 	}
-	private void moveUp() {
+	protected void moveUp() {
 		yPos += cInc;
 		computeView();
 	}
-	private void moveDown() {
+	protected void moveDown() {
 		yPos -= cInc;
 		computeView();
 	}
-	private void pitchUp() {
+	protected void pitchUp() {
 		pitch += cInc;
 		computeView();
 	}
-	private void pitchDown() {
+	protected void pitchDown() {
 		pitch -= cInc;
 		computeView();
 	}
-	private void yawLeft() {
+	protected void yawLeft() {
 		yaw -= cInc;
 		computeView();
 	}
-	private void yawRight() {
+	protected void yawRight() {
 		yaw += cInc;
 		computeView();
 	}
