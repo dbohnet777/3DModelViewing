@@ -30,8 +30,10 @@ public class Engine extends JFrame implements GLEventListener{
 	private int rendering_program;
 	private int vao[] = new int[1];
 	
+	private boolean toggleAxes = true;
+	
 	public Engine() {
-		setTitle("Assignment #1");
+		setTitle("Assignment #2");
 		setSize(1000, 1000);
 		myCanvas = new GLCanvas();
 		myCanvas.addGLEventListener(this);
@@ -40,7 +42,6 @@ public class Engine extends JFrame implements GLEventListener{
 	}
 
 	public void start() {
-		// TODO Auto-generated method stub
 		//create and start the FPS animator
 		FPSAnimator animator = new FPSAnimator(myCanvas, 30);
 		animator.start();
@@ -74,7 +75,6 @@ public class Engine extends JFrame implements GLEventListener{
 
 		String vshaderSource[] = util.readShaderSource("src/vert.shader"); // ./a1/vert.shader
 		String fshaderSource[] = util.readShaderSource("src/frag.shader"); // ./a1/frag.shader
-		int lengths[];
 
 		int vShader = gl.glCreateShader(GL_VERTEX_SHADER);
 		int fShader = gl.glCreateShader(GL_FRAGMENT_SHADER);
@@ -142,5 +142,10 @@ public class Engine extends JFrame implements GLEventListener{
 				glErr = gl.glGetError();
 			}
 			return foundError;
+		}
+		
+		//function to switch boolean value to draw axes or not
+		public void toggleAxes() {
+			toggleAxes = !toggleAxes;
 		}
 }

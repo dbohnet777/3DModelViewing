@@ -5,12 +5,14 @@ import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
 public class ToggleAxes extends AbstractAction {
-	public ToggleAxes (Camera c) {
-		//TODO
+	private Engine engine;
+	
+	public ToggleAxes (Engine eng) {
+		engine = eng;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent evt) {
-		//TODO
+		engine.toggleAxes();
 	}
 }
